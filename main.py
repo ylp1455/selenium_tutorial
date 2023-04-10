@@ -21,4 +21,12 @@ links = driver.find_element("xpath", "//a[@href]")
 
 
 for link in links:
-    print (link.get_attribute("innerHTML"))
+    if "Books" in link.getAttribute("innerHTML"):
+        link.click()
+        break
+
+
+
+book_links = driver.find_element("xpath", "'//div[contains(@class, 'elemntor-column-wrap')]") 
+
+
